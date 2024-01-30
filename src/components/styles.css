@@ -1,0 +1,90 @@
+/* Стилизация основного элемента скролла */
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #dedfdf;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Стилизация ползунка скролла */
+::-webkit-scrollbar-thumb {
+  background-color: #9b9b9b;
+  border-radius: 4px;
+}
+
+/* Стилизация ползунка скролла при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.swiper-product{
+  height: 430px;
+  width: 430px;
+}
+
+.swiper-product-pagination .swiper-pagination-bullet{
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+}
+
+
+.swiper-product-pagination{
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow: auto !important;
+  max-height: 430px !important; 
+  max-width: 110px !important; 
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  padding: 0 !important;
+}
+
+.swiper-product-pagination {
+  display: flex !important;
+  overflow: auto !important; /* Горизонтальная прокрутка */
+  scroll-snap-type: y mandatory !important; /* Обязательный снэп при прокрутке */
+}
+
+.swiper-product-pagination .swiper-pagination-bullet {
+  margin: 0 !important;
+  background: none;
+}
+
+.swiper-product-pagination .swiper-pagination-bullet-active {
+  flex-shrink: 0; /* Запрет на сжатие */
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  scroll-snap-align: center; /* Выравнивание элемента пагинации по центру */
+}
+
+
+@media screen and (max-width: 1200px) {
+  .swiper-product-pagination{
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow: auto;
+    max-height: 120px !important; 
+    max-width: 430px !important; 
+    margin-top: 10px;
+    scroll-snap-type: x mandatory !important; /* Обязательный снэп при прокрутке */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
